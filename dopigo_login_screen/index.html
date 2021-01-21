@@ -1,0 +1,152 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="./resources/cssFiles/main.css">
+    <script src="./resources/jsFiles/main.js"></script>
+    <script src="./resources/jsFiles/mask.js"></script>
+
+    <title>Login</title>
+  </head>
+
+  <body>    
+    <div class="jumbotron vertical-center">
+    <div class="container">
+        <div class="row login-container">
+
+            <div class="col-md-4 left-container">
+                <div id="step-1-left-container">
+                    <div class="row">
+                        <div class="circle-container">
+                            <div class="col-sm-6 circle-active">1</div>
+                            <div class="col-sm-6 circle">2</div>
+                        </div>
+                    </div>      
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p class="info-header">Give us some basic information</p>
+                        </div>
+                    </div>    
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p class="info-explain">To start off. Please enter main contact name, email adress and password</p>
+                        </div>
+                    </div>  
+                </div>
+                <div id="step-2-left-container">
+                    <div class="row">
+                        <div class="circle-container">
+                            <div class="col-sm-6 circle-active">1</div>
+                            <div class="col-sm-6 circle-active">2</div>
+                        </div>
+                    </div>      
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p class="info-header">Complate your registration</p>
+                        </div>
+                    </div>    
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p class="info-explain">Please enter business details.</p>
+                        </div>
+                    </div>  
+                </div>                       
+            </div>
+
+            <div class="col-md-8 right-div-container">                
+                <form id="step-1-form" action="#" onsubmit="return false">
+                    <p class="info-header-left">Step 1</p>
+                    <div class="row">
+                      <div class="col">
+                        <label for="user_full_name">Main Contact Name</label>
+                        <input type="text" class="form-control" id="user_full_name" placeholder="eg. Johnsmith">
+                      </div>
+                      <div class="col">
+                        <label for="user_email">Email Adress</label>
+                        <input type="email" class="form-control" id="user_email" placeholder="eg. Johnsmith@mybusiness.com">
+                      </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col">
+                          <label for="user_pass">Password</label>
+                          <input type="password" minlength="8" class="form-control" id="user_pass" placeholder="Password must be at least 8 characters" required >
+                        </div>
+                        <div class="col">
+                          <label for="user_pass_conf">&nbsp;</label>
+                          <input type="password" class="form-control" id="user_pass_conf" placeholder="Confirm Password" required >
+                        </div>
+                    </div>
+
+                    <hr class="form-hr"/>
+
+                    <button type="submit" class="btn form-button" onclick="GetStep2()">Continue</button>
+                </form>
+                
+                <form id="step-2-form">
+                    <p class="info-header-left">Step 2</p>
+                    <div class="row">
+                      <div class="col">
+                        <label for="bussiness_name">Business Name(English)</label>
+                        <input type="text" class="form-control" id="bussiness_name" placeholder="eg. mybusiness">
+                      </div>                      
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col">
+                          <label for="business_web_site">Business Website</label>
+                          <input type="text" class="form-control" id="business_web_site" placeholder="e.g. mybusiness.com">
+                        </div>
+                        <div class="col">
+                          <label for="main_phone_numbar">Main Phone Number</label>
+                          <input type="text" class="form-control" id="main_phone_numbar"  placeholder="e.g. 658 0000 0000">
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col">
+                          <label for="business_web_site">Please Select Your Business Type</label>
+                          <select class="form-control" id="business_type">
+                            <option value="">Please select</option>
+                            <option value="1">Sole Proprietorship</option>
+                            <option value="2">General Partnership</option>
+                          </select>
+                        </div>
+                        <div class="col">
+                          <label for="bussines_registration_number">Business Registration Number</label>
+                          <input type="text" class="form-control" id="bussines_registration_number" placeholder="e.g. 658 0000 0000">
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col">
+                          <label for="bussiness_adress">Business Adress(English)</label>
+                          <input type="text" class="form-control" id="bussiness_adress" placeholder="eg. mybusiness.com">
+                        </div>                      
+                      </div>
+
+                    <hr class="form-hr"/>
+
+                    <button type="submit" class="btn form-button-back" onclick="GetStep1()"> < Back</button>
+                    <button type="submit" class="btn form-button" onclick="SetForm()">Confirm</button>
+                    </div>
+                </form>
+            
+          </div>
+      </div>
+    </div>
+
+  </body>
+</html>
