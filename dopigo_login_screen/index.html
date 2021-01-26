@@ -24,6 +24,7 @@
                         <div class="circle-container">
                             <div class="col-sm-6 circle-active">1</div>
                             <div class="col-sm-6 circle">2</div>
+                            <div class="col-sm-6 circle">3</div>
                         </div>
                     </div>      
                     <div class="row">
@@ -42,6 +43,7 @@
                         <div class="circle-container">
                             <div class="col-sm-6 circle-active">1</div>
                             <div class="col-sm-6 circle-active">2</div>
+                            <div class="col-sm-6 circle">3</div>
                         </div>
                     </div>      
                     <div class="row">
@@ -54,7 +56,26 @@
                             <p class="info-explain">Please enter business details.</p>
                         </div>
                     </div>  
-                </div>                       
+                </div>    
+                <div id="step-3-left-container">
+                  <div class="row">
+                      <div class="circle-container">
+                          <div class="col-sm-6 circle-active">1</div>
+                          <div class="col-sm-6 circle-active">2</div>
+                          <div class="col-sm-6 circle-active">3</div>
+                      </div>
+                  </div>      
+                  <div class="row">
+                      <div class="col-sm-12">
+                          <p class="info-header">Complate your registration</p>
+                      </div>
+                  </div>    
+                  <div class="row">
+                      <div class="col-sm-12">
+                          <p class="info-explain">Please enter business details.</p>
+                      </div>
+                  </div>  
+              </div>                   
             </div>
 
             <div class="col-md-8 right-div-container">                
@@ -87,7 +108,7 @@
                     <hr class="form-hr"/>
 
                     <button type="submit" class="btn form-button" onclick="GetStep2()">Continue</button>
-                </div>
+                  </div>
                 
                 <div id="step-2-form">
                     <p class="info-header-left">Step 2</p>
@@ -142,7 +163,14 @@
                     <button type="submit" class="btn form-button-back" onclick="GetStep1()"> < Back</button>
                     <button type="submit" class="btn form-button" onclick="SetForm()">Confirm</button>
                     </div>
-                </div>
+
+                    <div id="step-3-form" class="jumbotron vertical-center">
+                      <div class="jumbotron min-vh-100 d-flex flex-column justify-content-center step-3-container">                        
+                        <p class="info-header-left">Thank You!</p>
+                      </div> 
+                    </div>
+
+                  </div>
             
           </div>
       </div>
