@@ -4,7 +4,11 @@ $(document).ready(function(){
 });
 
 function SetForm(){
-    alert("İşlem başarılı.");
+    $("#step-2-form").css("display","none");
+    $("#step-3-form").css("display","block");
+
+    $("#step-2-left-container").css("display","none");
+    $("#step-3-left-container").css("display","block");
 }
 
 function GetStep1(){
